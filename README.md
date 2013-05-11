@@ -31,6 +31,13 @@ Examples:
 
 To make things even easier there is a **Makefile** that you can customize and use it to run tests without typing long options :) Just type *make test*.
 
+## Run example tests
+
+Either use:
+    $ make test
+or
+    $ ./testrunner.py /usr/local/google_appengine exampletests
+
 ## Using Test Starter in your project
 
 The easiest way to add Test Starter to your applications is to copy **testrunner.py**, **teststarter.py** and **Makefile** to your app test folder.

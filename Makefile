@@ -4,7 +4,7 @@
 PROJECT_ROOT=.
 
 # Test suite config
-TMOD?=
+TMOD?=exampletests
 TMET?=
 
 # AppEngine dev server config
