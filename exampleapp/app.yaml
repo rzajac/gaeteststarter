@@ -1,0 +1,28 @@
+application: exampleapp
+version: 0-0-1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /_ah/pipeline(/.*)?
+  script: pipeline.handlers.app
+
+- url: /.*
+  script: main.app
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak$
+- ^(.*/)?.*\.svn(/.*)?$
+- ^(.*/)?.*\.git(/.*)?$
+- ^(.*/)?vendor/.*
