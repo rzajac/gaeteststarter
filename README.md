@@ -9,7 +9,7 @@ With the package you also get **testrunner.py** that will help you run tests:
 * run only tests form specific TestCase class
 * run only one test case from specific class
 
-Part of this package is example application and example tests. Please see the files for usage examples.
+Part of this package is example application and example tests. Please see the files for usage examples. [exampletests/test_example_app.py](https://github.com/rzajac/gaeteststarter/blob/master/exampletests/test_example_app.py)
 
 ## Test runner usage:
 
