@@ -1,8 +1,7 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-'''
-testrunner.py
-
+"""
 Test runner for Google AppEngine tests.
 
 Example usage:
@@ -29,7 +28,7 @@ Code downloaded from: http://github.com/rzajac/gaeteststarter
 @author: Rafal Zajac rzajac<at>gmail<dot>com
 @copyright: Copyright 2007-2013 Rafal Zajac rzajac<at>gmail<dot>com. All rights reserved.
 @license: Licensed under the MIT license
-'''
+"""
 
 import os
 import sys
@@ -38,7 +37,7 @@ import unittest2
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
-USAGE = '''Usage: testrunner.py SDK_PATH TEST_PATH [TEST_METHOD]
+USAGE = """Usage: testrunner.py SDK_PATH TEST_PATH [TEST_METHOD]
 
 Run unit tests for App Engine apps.
 
@@ -51,7 +50,8 @@ Examples:
   testrunner.py /sdk/path exampletests.test_example_app - run all tests in a specific file
   testrunner.py /sdk/path exampletests.test_example_app.ExampleAppTestHandlers - run all rests in a class
   testrunner.py /sdk/path exampletests.test_example_app.ExampleAppTestHandlers testGet - run one test
-'''
+"""
+
 
 def main(sdk_path, test_path, test_method=None):
 
@@ -75,6 +75,7 @@ def main(sdk_path, test_path, test_method=None):
         unittest2.TextTestRunner(verbosity=2).run(suite)
     else:
         print error
+
 
 def _create_suite(test_name, test_method=None):
 
@@ -103,7 +104,7 @@ def _create_suite(test_name, test_method=None):
         print e
         error = str(e)
 
-    return (suite, error)
+    return suite, error
 
 
 if __name__ == '__main__':

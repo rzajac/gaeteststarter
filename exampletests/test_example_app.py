@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 test_example_app.py
 
 Example tests for exampleapp that is part of this package.
@@ -10,7 +10,7 @@ Code downloaded from: http://github.com/rzajac/gaeteststarter
 @author: Rafal Zajac rzajac<at>gmail<dot>com
 @copyright: Copyright 2007-2013 Rafal Zajac rzajac<at>gmail<dot>com. All rights reserved.
 @license: Licensed under the MIT license
-'''
+"""
 
 from __future__ import with_statement
 
@@ -24,10 +24,9 @@ from google.appengine.ext import ndb
 from teststarter import BaseTestCase
 from exampleapp.main import app as tst_app
 
-# ==============================================================
 
 class ExampleAppTestHandlers(BaseTestCase):
-    '''Test app handlers'''
+    """Test app handlers"""
 
     def setUp(self):
 
@@ -75,10 +74,9 @@ class ExampleAppTestHandlers(BaseTestCase):
 
         self.assertTrue(ex.exception.message.startswith('Bad response: 404 Not Found'))
 
-# ==============================================================
 
 class ExampleAppTestQueues(BaseTestCase):
-    '''Test task queues'''
+    """Test task queues"""
 
     def setUp(self):
 
@@ -121,18 +119,16 @@ class ExampleAppTestQueues(BaseTestCase):
         # We should have run only one task
         self.assertEquals(1, count)
 
-# ==============================================================
 
 class Car(ndb.Model):
-    '''Example model'''
+    """Example model"""
 
     name = ndb.StringProperty()
     some_value = ndb.IntegerProperty(default=0)
 
-# ==============================================================
 
 class ExampleAppTestDatastore(BaseTestCase):
-    '''Test datastore'''
+    """Test datastore"""
 
     def setUp(self):
 

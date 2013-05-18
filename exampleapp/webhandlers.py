@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
-'''
+"""
 webhandlers.py
 
 This file is part of example app for Google AppEngine Test Starter project
@@ -11,13 +10,12 @@ Code downloaded from: http://github.com/rzajac/gaeteststarter
 @author: Rafal Zajac rzajac<at>gmail<dot>com
 @copyright: Copyright 2007-2013 Rafal Zajac rzajac<at>gmail<dot>com. All rights reserved.
 @license: Licensed under the MIT license
-'''
+"""
 
 # GAE imports
 import webapp2
 from google.appengine.api import taskqueue
 
-#====================================================================================================
 
 class TestHandler1(webapp2.RequestHandler):
 
@@ -43,7 +41,6 @@ class TestHandler1(webapp2.RequestHandler):
 
         self.response.write(param1 + param2)
 
-#====================================================================================================
 
 class TestHandler2(webapp2.RequestHandler):
 
@@ -52,6 +49,7 @@ class TestHandler2(webapp2.RequestHandler):
 
     def post(self):
         self.response.write(self.request.body)
+
 
 class TestTaskQueue(webapp2.RequestHandler):
 

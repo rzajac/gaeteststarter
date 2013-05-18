@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 main.py
 
 This file is part of example app for Google AppEngine Test Starter project
@@ -10,7 +10,7 @@ Code downloaded from: http://github.com/rzajac/gaeteststarter
 @author: Rafal Zajac rzajac<at>gmail<dot>com
 @copyright: Copyright 2007-2013 Rafal Zajac rzajac<at>gmail<dot>com. All rights reserved.
 @license: Licensed under the MIT license
-'''
+"""
 
 # Python imports
 
